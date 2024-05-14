@@ -620,9 +620,15 @@ contract Verifier {
             inputValues[i] = input[i];
         }
         if (verify(inputValues, proof) == 0) {
+            address =  inputValues[0],inputValues[1]; //R[2] and S are private so first two values are the private address
+            tokens = inputValues[inputValues.length - 1]; //last value is the amount of tokens to mint
+            mint(adress, tokens);
             return true;
         } else {
             return false;
         }
+    }
+    function mint(address, tokens) {
+        // mint tokens
     }
 }
