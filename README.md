@@ -49,7 +49,7 @@ Set Number of Data Points to 2 and Generate Simulated Data. This will create a *
 
 Create a new file in the root folder of pyCrypto **two_gmp_coordinates.py**.
 
-```
+```python
 import hashlib
 import os
 import json
@@ -150,7 +150,7 @@ If your wallet does not connect to the Remix IDE, click on the plug symbol right
 
 Switch to the file explorer tab on the left side and add a new file **calculations_and_verification.zok**. 
 
-```
+```zokrates
 from "ecc/babyjubjubParams" import BabyJubJubParams;
 import "signatures/verifyEddsa.zok" as verifyEddsa;
 import "ecc/babyjubjubParams.zok" as context;
@@ -192,7 +192,7 @@ Now copy the proof you saved in a text file directly into the verifyTx field aft
 
 In the terminal you then can open the call log and see: 
 
-```
+```json
 decoded output
 {
 	"0": "bool: r true"
